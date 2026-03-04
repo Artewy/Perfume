@@ -47,56 +47,52 @@
         }
 
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            /* Увеличили аватарку */
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
+            /* Придвинули к имени */
             border: 1px solid var(--border);
-            filter: grayscale(100%);
+            /* Убрали ч/б фильтр, теперь фото цветное */
             transition: var(--transition);
         }
 
         .profile-img:hover {
-            filter: grayscale(0%);
             transform: scale(1.05);
         }
 
         h1 {
-            /* User request: style h1 like "niche & selective" text (old subtitle) */
-            font-size: 13px;
-            font-weight: 300;
-            color: var(--text-secondary);
+            font-size: 20px;
+            /* Увеличили шрифт */
+            font-weight: 600;
+            /* Сделали полужирным */
+            color: var(--text-main);
+            /* Сделали цвет ярче */
             margin: 0;
             letter-spacing: 1px;
-            text-transform: lowercase;
         }
 
         .intro-text {
             font-size: 14px;
             color: var(--text-secondary);
-            margin: 20px 0 30px;
+            margin: 16px 0 30px;
             line-height: 1.6;
         }
 
-        .telegram-logo-icon {
-            height: 1em;
-            width: auto;
-            vertical-align: middle;
-            fill: #0088cc;
-            margin-left: 5px;
-        }
-
         .subtitle {
-            /* This is now styled as the brand's main header */
-            font-size: 22px;
+            font-size: 14px;
+            /* Уменьшили шрифт, чтобы влезло */
             font-weight: 600;
             color: var(--text-main);
-            letter-spacing: 3px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            white-space: nowrap;
+            /* Запретили перенос на новую строку */
         }
 
-        /* Новые заголовки и текст разделов */
+        /* Заголовки разделов */
         h2 {
             font-size: 18px;
             font-weight: 600;
@@ -139,7 +135,6 @@
             display: block;
         }
 
-        /* Анимация появления кнопок проектов */
         .links-container .link-card:nth-child(1) {
             animation-delay: 0.2s;
         }
@@ -166,7 +161,7 @@
             }
         }
 
-        /* Последний логотип placeholder */
+        /* Логотип */
         .final-logo {
             max-width: 150px;
             margin: 50px auto 20px;
@@ -190,18 +185,14 @@
 
     <div class="container">
         <div class="profile-header">
-            <img src="cat.jpg" alt="Артём" class="profile-img">
-            <h1>АРТЁМ</h1>
+            <img src="me.jpg" alt="Артём" class="profile-img">
+            <h1>Артём</h1>
+
             <p class="intro-text">
-                Привет! Меня зовут Артём. Я развиваю свои парфюмерные сообщества в Telegram
-                <svg class="telegram-logo-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.12 7.14-.14.72-.4 1-.66 1.02-.56.06-1-.38-1.54-.74-.84-.56-1.32-.9-2.14-1.44-1-.62-.35-.96.22-1.55.15-.15 2.76-2.53 2.81-2.75.01-.03.01-.1-.01-.13-.02-.03-.06-.02-.1-.01-.04.01-1.12.72-3.17 2.1-.3.2-.56.3-.78.3-.24 0-.7-.13-1.04-.24-.4-.13-.73-.2-.7-.42.02-.12.2-.25.56-.4 2.22-.96 3.7-1.6 4.43-1.92 2.1-.9.44-1.05.44.11-.01.12-.01.24-.03.35z">
-                    </path>
-                </svg>
+                Привет! Меня зовут Артём. Я увлекаюсь парфюмом и развиваю свои парфюмерные сообщества в Telegram
             </p>
 
-            <p class="subtitle">ARTEMY PARFUM | NICHE & LUXURY</p>
+            <p class="subtitle">ARTEWY PARFUM | NICHE & LUXURY</p>
         </div>
 
         <h2>МОИ ПРОЕКТЫ</h2>
