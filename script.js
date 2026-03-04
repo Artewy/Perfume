@@ -1,7 +1,7 @@
 const myProjects = [
     { name: "Парфам Пополам", url: "https://t.me/pb_aq" },
-    { name: "ParfDrink", url: "https://t.me/pd_aa" },
-    { name: "ANTIFAKE ПАРФЮМ", url: "https://t.me/antifakePARF" }
+    { name: "Парфюмерный бармен", url: "https://t.me/pd_aa" },
+    { name: "Антифейк Парфюм", url: "https://t.me/antifakePARF" }
 ];
 
 const container = document.getElementById('projects-container');
