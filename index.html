@@ -9,6 +9,7 @@
     <style>
         :root {
             --bg-color: #050505;
+            --metal-gradient: radial-gradient(circle at center, #2e2e2e, #050505 80%);
             --card-bg: rgba(255, 255, 255, 0.05);
             --card-hover: rgba(255, 255, 255, 0.1);
             --text-main: #ffffff;
@@ -21,6 +22,7 @@
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
+            background-image: var(--metal-gradient);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             display: flex;
@@ -36,11 +38,12 @@
             text-align: center;
         }
 
-        /* Аватар */
+        /* Профиль */
         .profile-header {
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 0.8s forwards;
+            margin-bottom: 40px;
         }
 
         .profile-img {
@@ -60,22 +63,58 @@
         }
 
         h1 {
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .subtitle {
+            /* User request: style h1 like "niche & selective" text (old subtitle) */
             font-size: 13px;
+            font-weight: 300;
             color: var(--text-secondary);
-            margin: 12px 0 40px;
+            margin: 0;
             letter-spacing: 1px;
             text-transform: lowercase;
         }
 
-        /* Ссылки */
+        .intro-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 20px 0 30px;
+            line-height: 1.6;
+        }
+
+        .telegram-logo-icon {
+            height: 1em;
+            width: auto;
+            vertical-align: middle;
+            fill: #0088cc;
+            margin-left: 5px;
+        }
+
+        .subtitle {
+            /* This is now styled as the brand's main header */
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-main);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Новые заголовки и текст разделов */
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .cooperation-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Кнопки */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -97,18 +136,19 @@
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 0.6s forwards;
+            display: block;
         }
 
-        /* Поочередная анимация появления кнопок */
-        .link-card:nth-child(1) {
+        /* Анимация появления кнопок проектов */
+        .links-container .link-card:nth-child(1) {
             animation-delay: 0.2s;
         }
 
-        .link-card:nth-child(2) {
+        .links-container .link-card:nth-child(2) {
             animation-delay: 0.4s;
         }
 
-        .link-card:nth-child(3) {
+        .links-container .link-card:nth-child(3) {
             animation-delay: 0.6s;
         }
 
@@ -126,6 +166,15 @@
             }
         }
 
+        /* Последний логотип placeholder */
+        .final-logo {
+            max-width: 150px;
+            margin: 50px auto 20px;
+            display: block;
+            opacity: 0.5;
+        }
+
+        /* Футер */
         .footer {
             margin-top: 60px;
             font-size: 10px;
@@ -142,15 +191,33 @@
     <div class="container">
         <div class="profile-header">
             <img src="me.jpg" alt="Артём" class="profile-img">
-            <h1>Артём</h1>
-            <p class="subtitle">Artewy Parfum | Niche & Selective</p>
+            <h1>АРТЁМ</h1>
+            <p class="intro-text">
+                Привет! Меня зовут Артём. Я развиваю свои парфюмерные сообщества в Telegram
+                <svg class="telegram-logo-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.12 7.14-.14.72-.4 1-.66 1.02-.56.06-1-.38-1.54-.74-.84-.56-1.32-.9-2.14-1.44-1-.62-.35-.96.22-1.55.15-.15 2.76-2.53 2.81-2.75.01-.03.01-.1-.01-.13-.02-.03-.06-.02-.1-.01-.04.01-1.12.72-3.17 2.1-.3.2-.56.3-.78.3-.24 0-.7-.13-1.04-.24-.4-.13-.73-.2-.7-.42.02-.12.2-.25.56-.4 2.22-.96 3.7-1.6 4.43-1.92 2.1-.9.44-1.05.44.11-.01.12-.01.24-.03.35z">
+                    </path>
+                </svg>
+            </p>
+
+            <p class="subtitle">ARTEMY PARFUM | NICHE & SELECTIVE</p>
         </div>
 
+        <h2>МОИ ПРОЕКТЫ</h2>
         <div class="links-container">
             <a href="https://t.me/pb_aq" class="link-card" target="_blank">Парфам Пополам</a>
             <a href="https://t.me/pd_aa" class="link-card" target="_blank">ParfDrink</a>
             <a href="https://t.me/antifakePARF" class="link-card" target="_blank">ANTIFAKE ПАРФЮМ</a>
         </div>
+
+        <h2>СОТРУДНИЧЕСТВО</h2>
+        <p class="cooperation-text">
+            По всем вопросам сотрудничества и рекламы обращайтесь ко мне в Telegram
+        </p>
+        <a href="https://t.me/Artewy" class="link-card" target="_blank">Telegram</a>
+
+        <img src="logo_loader.png" alt="Artewy Parfum Logo" class="final-logo">
 
         <div class="footer">
             EST. 2026 • ARTEWY PARFUM
