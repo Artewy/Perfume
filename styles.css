@@ -87,7 +87,6 @@ body {
 
 h1 {
     font-size: 13px;
-
     font-weight: 600;
     color: var(--text-main);
     margin: 0;
@@ -98,27 +97,9 @@ h1 {
 .intro-text {
     font-size: 13px;
     font-weight: 300;
-
     color: var(--text-secondary);
     margin: 16px 0 10px;
     line-height: 1.6;
-}
-
-.scroll-down {
-    display: inline-block;
-    margin-top: 10px;
-    color: var(--text-secondary);
-    font-size: 11px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: var(--transition);
-    font-weight: 400;
-}
-
-.scroll-down:hover {
-    color: var(--text-main);
-    transform: translateY(3px);
 }
 
 h2 {
@@ -153,8 +134,8 @@ h2 {
     text-decoration: none;
     padding: 20px;
     border-radius: 16px;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 0.5px;
     border: 1px solid var(--border);
     transition: var(--transition);
