@@ -1,6 +1,6 @@
 const myProjects = [
     { name: "Парфам Пополам", url: "https://t.me/pb_aq" },
-    { name: "Парфюмерный бармен", url: "https://t.me/pd_aa" },
+    { name: "Парфюмерный Бармен", url: "https://t.me/pd_aa" },
     { name: "Антифейк Парфюм", url: "https://t.me/antifakePARF" }
 ];
 
