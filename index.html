@@ -6,207 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artewy Parfum | Артём</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #050505;
-            --metal-gradient: radial-gradient(circle at center, #2e2e2e, #050505 80%);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-hover: rgba(255, 255, 255, 0.1);
-            --text-main: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.6);
-            --border: rgba(255, 255, 255, 0.1);
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            background-image: var(--metal-gradient);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            padding: 60px 24px;
-            text-align: center;
-        }
-
-        /* Профиль */
-        .profile-header {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s forwards;
-            margin-bottom: 40px;
-        }
-
-        .profile-img {
-            width: 130px;
-            /* Увеличили аватарку */
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 12px;
-            /* Придвинули к имени */
-            border: 1px solid var(--border);
-            /* Убрали ч/б фильтр, теперь фото цветное */
-            transition: var(--transition);
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            font-size: 20px;
-            /* Увеличили шрифт */
-            font-weight: 600;
-            /* Сделали полужирным */
-            color: var(--text-main);
-            /* Сделали цвет ярче */
-            margin: 0;
-            letter-spacing: 1px;
-        }
-
-        .intro-text {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin: 16px 0 30px;
-            line-height: 1.6;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            /* Уменьшили шрифт, чтобы влезло */
-            font-weight: 600;
-            color: var(--text-main);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            white-space: nowrap;
-            /* Запретили перенос на новую строку */
-        }
-
-        /* Заголовки разделов */
-        h2 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            color: var(--text-main);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .cooperation-text {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        /* Кнопки */
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .link-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: var(--text-main);
-            text-decoration: none;
-            padding: 20px;
-            border-radius: 16px;
-            font-size: 14px;
-            font-weight: 400;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.6s forwards;
-            display: block;
-        }
-
-        .links-container .link-card:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-
-        .links-container .link-card:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .links-container .link-card:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .link-card:hover {
-            background: var(--card-hover);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: scale(1.02);
-            letter-spacing: 1px;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Логотип */
-        .final-logo {
-            max-width: 150px;
-            margin: 50px auto 20px;
-            display: block;
-            opacity: 0.5;
-        }
-
-        /* Футер */
-        .footer {
-            margin-top: 60px;
-            font-size: 10px;
-            color: var(--text-secondary);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0.5;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <div class="container">
         <div class="profile-header">
-            <img src="me.jpg" alt="Артём" class="profile-img">
+            <img src="cat.jpg" alt="Артём" class="profile-img">
             <h1>Артём</h1>
-
             <p class="intro-text">
-                Привет! Меня зовут Артём. Я увлекаюсь парфюмом и развиваю свои парфюмерные сообщества в Telegram
+                Привет! Меня зовут Артём. Я развиваю свои парфюмерные сообщества в Telegram
             </p>
-
-            <p class="subtitle">ARTEWY PARFUM | NICHE & LUXURY</p>
+            <p class="subtitle">ARTEMY PARFUM | NICHE & LUXURY</p>
         </div>
 
         <h2>МОИ ПРОЕКТЫ</h2>
-        <div class="links-container">
-            <a href="https://t.me/pb_aq" class="link-card" target="_blank">Парфам Пополам</a>
-            <a href="https://t.me/pd_aa" class="link-card" target="_blank">ParfDrink</a>
-            <a href="https://t.me/antifakePARF" class="link-card" target="_blank">ANTIFAKE ПАРФЮМ</a>
-        </div>
+        <div class="links-container" id="projects-container"></div>
 
         <h2>СОТРУДНИЧЕСТВО</h2>
         <p class="cooperation-text">
             По всем вопросам сотрудничества и рекламы обращайтесь ко мне в Telegram
         </p>
-        <a href="https://t.me/Artewy" class="link-card" target="_blank">Telegram</a>
+        <a href="https://t.me/Artewy" class="link-card main-contact" target="_blank">Telegram</a>
 
         <img src="logo_loader.png" alt="Artewy Parfum Logo" class="final-logo">
 
@@ -215,6 +37,7 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
